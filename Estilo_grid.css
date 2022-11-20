@@ -1,0 +1,50 @@
+/*Zerando todas as margens*/
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/*Criando e configurando o Grid*/
+.pagina {
+    display: grid;
+    grid-template-areas: "tit" "men" "con" "conEx" "rod";
+}
+
+.titulo {
+    color: hsl(245, 76%, 13%);
+    background-color: #e9967a;
+    grid-area: tit;
+}
+
+.menuPrincipal {
+    color: hsl(245, 76%, 13%);
+    background-color: hsl(49, 72%, 70%);
+    grid-area: men;    
+}
+
+.conteudo {
+    color: hsl(245, 76%, 13%);
+    background-color: hsl(165, 72%, 70%);
+    grid-area: con;
+}
+
+.conteudoExtra {
+    color: hsl(245, 76%, 13%);
+    background-color: hsl(281, 72%, 70%);
+    grid-area: conEx;
+}
+
+.rodape {
+    color: hsl(245, 76%, 13%);
+    background-color: hsl(340, 72%, 70%);
+    grid-area: rod;
+}
+
+@media  screen and (min-width: 480px) {
+    .pagina {
+        grid-template-areas: "tit tit men"
+                            "con con conEx"
+                            "rod rod rod";
+    }
+}
